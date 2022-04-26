@@ -1,0 +1,11 @@
+site_name: Popup Rideshare
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+nav:
+  - Home: index.md
+  - iOS: ios.md
+  - Android: android.md
