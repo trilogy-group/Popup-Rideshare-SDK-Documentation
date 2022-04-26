@@ -6,6 +6,10 @@ theme:
     - yaml
     - rust
 nav:
-  - Home: index.md
-  - iOS: ios.md
-  - Android: android.md
+  - Home: 'index.md'
+  - iOS:
+    - 'Permissions': 'writing-your-docs.md'
+    - 'RWRider': 'styling-your-docs.md'
+  - Android:
+    - 'License': 'license.md'
+    - 'Release Notes': 'release-notes.md'
