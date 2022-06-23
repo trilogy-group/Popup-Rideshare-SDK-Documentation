@@ -1,15 +1,52 @@
-site_name: Popup Rideshare
+site_name: Pop-Up Rideshare
 theme:
-  name: readthedocs
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rust
+  logo: assets/Popup_Logo.png
+  favicon: assets/Popup_Logo.png
+  name: material
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      primary: light blue
+      scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: light blue
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  features:
+    - search.suggest
+    - navigation.top
+extra:
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/popuprideshare/
+    - icon: fontawesome/brands/github
+      link: https://github.com/trilogy-group/rideaustin-android
+plugins:
+  - search
+
 nav:
-  - Home: 'index.md'
-  - iOS:
-    - 'Permissions': 'writing-your-docs.md'
-    - 'RWRider': 'styling-your-docs.md'
-  - Android:
-    - 'License': 'license.md'
-    - 'Release Notes': 'release-notes.md'
+  - Introducing the Popup Rideshare SDK: 'index.md'
+  - Integrating iOS Sdk:
+    - Overview: 'ios/overview.md'
+    - Concepts: 'ios/concepts.md'
+    - Getting Started: 'ios/getting-started.md'
+    - Configuration: 'ios/configuration.md'
+    - Observability: 'ios/observability.md'
+    - FAQs: 'ios/faq.md'
+  - Integrating Android Sdk:
+    - Overview: 'android/overview.md'
+    - Concepts: 'android/concepts.md'
+    - Getting Started: 'android/getting-started.md'
+    - Configuration: 'android/configuration.md'
+    - Observability: 'android/observability.md'
+    - FAQs: 'android/faq.md'
+  - Guides: 'guides.md'
+  - References: 'references.md'
+  - Changelog: 'changelog.md'
+  - Support: 'support.md'
+  - Gallery: 'gallery.md'
+
