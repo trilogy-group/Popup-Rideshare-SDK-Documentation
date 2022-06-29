@@ -19,6 +19,7 @@ theme:
   features:
     - search.suggest
     - navigation.top
+    - content.code.annotate
 extra:
   social:
     - icon: fontawesome/brands/facebook
@@ -27,14 +28,32 @@ extra:
       link: https://github.com/trilogy-group/rideaustin-android
 plugins:
   - search
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 nav:
   - Introducing the Popup Rideshare SDK: 'index.md'
   - Integrating iOS Sdk:
     - Overview: 'ios/overview.md'
     - Concepts: 'ios/concepts.md'
-    - Getting Started: 'ios/getting-started.md'
-    - Configuration: 'ios/configuration.md'
+    - Getting Started:
+            - High Level SDK: 'ios/high-level-sdk-getting-started.md'
+            - Low Level SDK: 'ios/low-level-sdk-getting-started.md'
+    - References:
+            - High Level SDK: 'ios/high-level-sdk-observability.md'
+            - Low Level SDK:
+                - Register: 'ios/register.md'
+                - Login: 'ios/login.md'
+                - ForgotPassword: 'ios/forgot-password.md'
+                - Client: 'ios/client.md'
+    - Notifications: 'ios/notifications.md'
+    - Configuration:
+            - High Level SDK: 'ios/high-level-sdk-configuration.md'
+            - Low Level SDK: 'ios/low-level-sdk-configuration.md'
     - Observability: 'ios/observability.md'
     - FAQs: 'ios/faq.md'
   - Integrating Android Sdk:
