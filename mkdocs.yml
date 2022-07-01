@@ -58,11 +58,13 @@ nav:
     - FAQs: 'ios/faq.md'
   - Integrating Android Sdk:
     - Overview: 'android/overview.md'
-    - Concepts: 'android/concepts.md'
+    - Concepts: 
+            - Plug & Play Concepts: 'android/concepts/plug-and-play.md'
+            - Build & Integrate Concepts: 'android/concepts/build-and-integrate.md'
     - Getting Started: 'android/getting-started.md'
     - Configuration: 'android/configuration.md'
     - Observability: 'android/observability.md'
-    - FAQs: 'android/faq.md'
+    - FAQs: 'android/faq.md' 
   - Guides: 'guides.md'
   - References: 'references.md'
   - Changelog: 'changelog.md'

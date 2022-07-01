@@ -27,7 +27,7 @@ While onboarding, you can also request control permitted ride areas by configuri
 ## Requirements
 Following needs to be setup during onboarding for best experience of the services.
 
-- Allowing popup service to send notifications to your app. This is required so that rider is notifid of ride status even if he has closed the app.
 - Logo, message and other images required for campaigning purposes.
+- Allowing popup service to send notifications to your app. This is required so that rider is notified of ride status even if he has closed the app.
 
 
