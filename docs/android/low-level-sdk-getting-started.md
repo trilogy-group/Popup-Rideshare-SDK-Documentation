@@ -44,28 +44,33 @@ The SDK must be initialized by calling the following method in PopupManager:
 init(Application application, @NonNull PopupConfig popupConfig)
 ```
 
+The SDK must be initialized before trying to use any of the other operations.
+
+## Popup Core
+
 The following functions are exposed in the PopupCore class:
 
-1.  Registering for email-password login based users.
+1.  Registering for email-password login based users. This creates a new user, and this user must login using email and password.
 
     ```java
     public static void registerWithEmailAndPassword(String email, String socialId, String password, String firstName, String lastName, String phone, String data, long cityId)
     ```
 
-2.  Registering for otp login based users. Note that this is similar to the previous method, but does not accept a password field.
+2.  Registering for otp login based users. This creates a new user, and this user must login using OTP based authentication. Note that this is similar to the previous method, but does not accept a password field.
 
     ```java
     public static void registerWithPhoneNumber(final String email, final String socialId, String firstName, String lastName, String phone, String data, long cityId)
     ```
 
-3.  Logging in with email and password.
+3.  Used to log in a user who was registered using `registerWithEmailAndPassword`.
+    Returns a RiderInterface object if the login was successful.
 
     ```java
     public static RiderInterface loginWithPassword(String email, String password)
     ```
 
-4.  Request an OTP. Returns an observable that emits the token required to validate the number.
-    The token parameter is the token received, and the code parameter is the otp received.
+4.  Request an OTP. Returns an observable that emits a temporary token.
+    This temporary token must be passed while trying to validate the OTP.
 
     ```java
     public static Observable<String> requestOtp(String phoneNumber)
@@ -73,6 +78,7 @@ The following functions are exposed in the PopupCore class:
 
 5.  Verify an OTP. The token required here is the one generated in `requestOtp`.
     Returns a boolean indicating whether the verification was successful.
+    The token parameter is the token received while requesting the OTP, and the code parameter is the OTP received.
 
     ```java
     public static Observable<Boolean> verifyPhoneNumber(String token, String code)
@@ -81,13 +87,12 @@ The following functions are exposed in the PopupCore class:
 6.  Request an OTP. Returns an observable that emits the token required to validate the number.
     Also ensures that the phone number is associated with an existing user.
     Should be used in places where the user is required to be created, for example, during log in.
-    Requires `PopupAppManager` to have been initialized with a valid SDK key before this.
 
     ```java
     public static Observable<String> requestOtpForExistingUser(String phoneNumber, String SdkKey)
     ```
 
-7.  Logging in with otp. The token parameter is the token received, and the code parameter is the otp received.
+7.  Logging in with otp. The token parameter is the token received while requesting the OTP, and the code parameter is the OTP received.
     Requires `PopupAppManager` to have been initialized with a valid SDK key before this.
 
     ```java
@@ -95,6 +100,7 @@ The following functions are exposed in the PopupCore class:
     ```
 
 8.  Restores user data from the shared preferences if it exists. This data is saved by default after login.
+    Can be used to check if a user is already logged in at launch, and can avoid having to log in again.
 
     ```java
     public static RiderInterface restoreData()
@@ -104,13 +110,13 @@ The following functions are exposed in the PopupCore class:
 
 The following methods are exposed in the RiderInterface, whic is received on successful login.
 
-1.  Log out the current user
+1.  Log out the current user.
 
     ```java
     void logout()
     ```
 
-2.  Check whether the user has accepted the terms.
+2.  Check whether the user has accepted the Popup terms and conditions.
 
     ```java
     boolean hasAcceptedTerms()
@@ -128,7 +134,7 @@ The following methods are exposed in the RiderInterface, whic is received on suc
     boolean isInRide()
     ```
 
-5.  Get the logged in user's active ride.
+5.  Get the logged in user's active ride, if it exists.
 
     ```java
     Ride getActiveRide()
@@ -158,13 +164,13 @@ The following methods are exposed in the RiderInterface, whic is received on suc
     Observable<List<DriverLocation>> getNearestDrivers(double lat, double lng, long cityId)
     ```
 
-10. Add a new payment method for the logged in user.
+10. Add a new payment credit card for the logged in user.
 
     ```java
     Observable<Payment> addNewPayment(final Card card);
     ```
 
-11. Delete a payment method for a logged in user.
+11. Delete a credit card for a logged in user.
 
     ```java
     Observable<List<Payment>> deletePayment(long cardId);
@@ -200,19 +206,19 @@ The following methods are exposed in the RiderInterface, whic is received on suc
     boolean hasUnpaid()
     ```
 
-17. Pay the unpaid balance.
+17. Pay off the balance for any unpaid ride.
 
     ```java
     Observable<Void> payUnpaidBalance()
     ```
 
-18. Register the token with the popup server to receive notifications.
+18. Register the token with the popup server to receive notifications. This is automatically done during login, but must be also called when Firebase refreshed the token.
 
     ```java
     Observable<Object> sendNotificationTokenToPopupServer(final String token, final AvatarType avatarType)
     ```
 
-19. Send an email to Popup support
+19. Send an email to Popup support.
 
     ```java
     Observable<Void> contactSupportMail(String message, long rideId, long cityId)
@@ -263,7 +269,7 @@ The following methods are exposed in the RiderInterface, whic is received on suc
     Observable<ServerMessage> postFoundItem(Map<String, RequestBody> params)
     ```
 
-27. Update a user's details.
+27. Update a user's details. Accepts the updated user object.
 
     ```java
     Observable<User> updateUser(User user)

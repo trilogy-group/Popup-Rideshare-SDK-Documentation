@@ -52,6 +52,8 @@ The SDK can be launched by calling the following method in Popup:
 launch(Context context);
 ```
 
+Note: The SDK must be initialized before trying to launch it.
+
 Example code:
 
 ```java
