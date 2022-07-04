@@ -3,12 +3,12 @@ theme:
   logo: assets/Popup_Logo.png
   favicon: assets/Popup_Logo.png
   name: material
-  palette: 
+  palette:
     - media: "(prefers-color-scheme: light)"
       primary: light blue
       scheme: default
       toggle:
-        icon: material/toggle-switch 
+        icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: light blue
@@ -36,38 +36,40 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Introducing the Popup Rideshare SDK: 'index.md'
+  - Introducing the Popup Rideshare SDK: "index.md"
   - Integrating iOS Sdk:
-    - Overview: 'ios/overview.md'
-    - Concepts: 'ios/concepts.md'
-    - Getting Started:
-            - High Level SDK: 'ios/high-level-sdk-getting-started.md'
-            - Low Level SDK: 'ios/low-level-sdk-getting-started.md'
-    - References:
-            - High Level SDK: 'ios/high-level-sdk-observability.md'
-            - Low Level SDK:
-                - Register: 'ios/register.md'
-                - Login: 'ios/login.md'
-                - ForgotPassword: 'ios/forgot-password.md'
-                - Client: 'ios/client.md'
-    - Notifications: 'ios/notifications.md'
-    - Configuration:
-            - High Level SDK: 'ios/high-level-sdk-configuration.md'
-            - Low Level SDK: 'ios/low-level-sdk-configuration.md'
-    - Observability: 'ios/observability.md'
-    - FAQs: 'ios/faq.md'
+      - Overview: "ios/overview.md"
+      - Concepts: "ios/concepts.md"
+      - Getting Started:
+          - High Level SDK: "ios/high-level-sdk-getting-started.md"
+          - Low Level SDK: "ios/low-level-sdk-getting-started.md"
+      - References:
+          - High Level SDK: "ios/high-level-sdk-observability.md"
+          - Low Level SDK:
+              - Register: "ios/register.md"
+              - Login: "ios/login.md"
+              - ForgotPassword: "ios/forgot-password.md"
+              - Client: "ios/client.md"
+      - Notifications: "ios/notifications.md"
+      - Configuration:
+          - High Level SDK: "ios/high-level-sdk-configuration.md"
+          - Low Level SDK: "ios/low-level-sdk-configuration.md"
+      - Observability: "ios/observability.md"
+      - FAQs: "ios/faq.md"
   - Integrating Android Sdk:
-    - Overview: 'android/overview.md'
+    - Overview: "android/overview.md"
     - Concepts: 
-            - Plug & Play Concepts: 'android/concepts/plug-and-play.md'
-            - Build & Integrate Concepts: 'android/concepts/build-and-integrate.md'
-    - Getting Started: 'android/getting-started.md'
-    - Configuration: 'android/configuration.md'
-    - Observability: 'android/observability.md'
-    - FAQs: 'android/faq.md' 
-  - Guides: 'guides.md'
-  - References: 'references.md'
-  - Changelog: 'changelog.md'
-  - Support: 'support.md'
-  - Gallery: 'gallery.md'
+            - Plug & Play Concepts: "android/concepts/plug-and-play.md"
+            - Build & Integrate Concepts: "android/concepts/build-and-integrate.md"
+      - Getting Started:
+          - High Level SDK: "android/high-level-sdk-getting-started.md"
+          - Low Level SDK: "android/low-level-sdk-getting-started.md"
+      - Configuration: "android/configuration.md"
+      - Observability: "android/observability.md"
+      - FAQs: "android/faq.md"
+  - Guides: "guides.md"
+  - References: "references.md"
+  - Changelog: "changelog.md"
+  - Support: "support.md"
+  - Gallery: "gallery.md"
 
