@@ -61,14 +61,14 @@ nav:
     - Concepts: 
             - Plug & Play Concepts: "android/concepts/plug-and-play.md"
             - Build & Integrate Concepts: "android/concepts/build-and-integrate.md"
-      - Getting Started:
-          - High Level SDK: "android/high-level-sdk-getting-started.md"
-          - Low Level SDK: "android/low-level-sdk-getting-started.md"
-      - Configuration: "android/configuration.md"
-      - Observability: "android/observability.md"
-      - FAQs: "android/faq.md"
-  - Guides: "guides.md"
-  - References: "references.md"
+    - Configuration: "android/configuration.md"
+    - Getting Started: "android/getting-started.md"
+    - FAQs: "android/faq.md"
+    - References:
+          - RiderAuthorizer: 'android/reference/RiderAuthorizer.md'
+          - AuthorizedRider: 'android/reference/AuthorizedRider.md'
+          - RideRequest: 'android/reference/RideRequest.md'
+          - Ride: 'android/reference/Ride.md'
   - Changelog: "changelog.md"
   - Support: "support.md"
   - Gallery: "gallery.md"

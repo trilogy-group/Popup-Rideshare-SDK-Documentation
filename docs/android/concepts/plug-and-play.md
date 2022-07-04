@@ -35,4 +35,4 @@ After launching the sdk, for the first time user, you will see the sdk requests 
 We dont save any credit card information and instead rely on stripe as payment partner to securely process payments.
 While the rides are normally free, we still need payment information in case rider wants to give additional tip to drivers or if they make a mess in car and need to cover damages.
 
-Next refer to Getting started or go over to Build and Integrate if interested to know internal details about sdk.
+Next you can refer to Getting started or go over to Build and Integrate Concepts if interested to know internal details about sdk.

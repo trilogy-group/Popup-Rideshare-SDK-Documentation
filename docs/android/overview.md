@@ -1,4 +1,6 @@
 ## Sdk features
+
+### What does sdk do ?
   The sdk will allow, within your app, performing various operations on popup service. The operations include:
   
   - registration of account with popup
@@ -22,12 +24,12 @@ Following operations are configured during onboarding and are out of scope for t
 
 The sdk will automatically adapt to above configurations set during onboarding.
 
-## Using SDK
+## Using Android SDK
 To make use of Popup RideShare sdk within your app, you start with defining latest sdk library as your dependency.
 
 Next, you will need an sdk key from the support team which you will need to create a configuraion object and pass it to initialize the sdk.
 
-### SDK flavors
+### SDK Modes
 The sdk can be used in two differnt mode.
 
 1. Plug and play 
