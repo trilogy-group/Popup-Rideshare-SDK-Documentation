@@ -45,3 +45,50 @@ public enum RegistrationMethod: Int{
     case PasswordWithOTP
 }
 ```
+
+#Required Permissions - 
+
+## Location Permssion
+
+Please follow the below two steps to provide the location permission - 
+
+####Step 1
+
+Please give the location permission in capabilities - 
+
+1. Go to the project navigatior of main target.
+
+2. Go to the signing and capabilities section.
+
+3. Tap on "+ capability" icon and It will enable the background modes under the signing and capabilities section.
+
+4. Please check mark the location permission.
+
+####Step 2
+
+Please add below key value pairs in plist - 
+```swift
+<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+<string>Always and in usage permissions message</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>When in usage permissions message<string>
+```
+
+## Push Notification Permission
+Please give the location permission in capabilities - 
+
+1. Go to the project navigatior of main target.
+
+2. Go to the signing and capabilities section.
+
+3. Tap on "+ capability" icon and It will enable the background modes under the signing and capabilities section.
+
+4. Please check mark the remote notification section.
+
+## Camera and Camera Roll permssion
+```swift
+<key>NSCameraUsageDescription</key>
+<string>Why are we using the camera message</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Why are we using the camera roll access message<string>
+```
