@@ -57,8 +57,10 @@ nav:
       - Observability: "ios/observability.md"
       - FAQs: "ios/faq.md"
   - Integrating Android Sdk:
-      - Overview: "android/overview.md"
-      - Concepts: "android/concepts.md"
+    - Overview: "android/overview.md"
+    - Concepts: 
+            - Plug & Play Concepts: "android/concepts/plug-and-play.md"
+            - Build & Integrate Concepts: "android/concepts/build-and-integrate.md"
       - Getting Started:
           - High Level SDK: "android/high-level-sdk-getting-started.md"
           - Low Level SDK: "android/low-level-sdk-getting-started.md"
@@ -70,3 +72,4 @@ nav:
   - Changelog: "changelog.md"
   - Support: "support.md"
   - Gallery: "gallery.md"
+
