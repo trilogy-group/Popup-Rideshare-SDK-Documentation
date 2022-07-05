@@ -33,6 +33,18 @@ import RWRider
 import <RWRider/RWRider.h>
 ```
 
+#### If you feel any issue while using the installed pod file in client app then please run the below script at the end of your pod file -
+```swift
+post_install do |installer|
+        installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+            config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+       
+          end
+    end
+end
+```
+
 ## Launch the sdk
 
 We just need to call the single method to launch the sdk. Please make sure this should called after steup.
