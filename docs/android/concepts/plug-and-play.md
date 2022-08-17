@@ -18,7 +18,7 @@ You must already have a registered app in the play store account. You will need 
 During the onboarding process, our team will share an sdk key with you. You use that sdk key to create a Popup Config object as shown in getting started. You can also append your own logger if you wish. If you use Firebase Crashlytics, configure the same in config and the sdk will automatically upload extra log and data with crashes if any.
 
 ## Popup Notifications
-For Popup Server to send notifications to your apps, it needs to authenticate itself with Google. This requires you to share api key with us furing onboarding which is available in your firebase project settings under Cloud Messaging.
+For Popup Server to send notifications to your apps, it needs to authenticate itself with Google. This requires you to share api key with us during onboarding which is available in your firebase project settings under Cloud Messaging.
 Popup sends notification to let riders know if Driver has been allocated, driver has arrived etc. This is important because riders often lock their phone or switch apps while waiting and rely on notifications to let them know. 
 Alternately we can send sms instead of notifications but they are not reliable and are often delivered much late than needed.
 

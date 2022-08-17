@@ -8,10 +8,26 @@ Riders may want to tip the drivers for which they will be charged the tip amount
 No we do not store credit card information. We use stripe as payment partner which ensures secure payment processing.
 
 ## During development, how do I book fake rides to test ?
-Please reach out to support team for this.
+You can use test environment which allows adding a fake credit card in payments.
+To use test environment, just change your gradle dependency to below
+
+```java
+implementation "com.messageone:popup-android-test-env:$latest_version"
+```
+You can use below as fake credit card.
+```
+card number : 4242 4242 4242 4242
+Cvv : any three digit number
+exp date : any future date
+```
+You will also need to be a fake driver to accept ride requests and fulfill them with fake gps.
+To be a fake driver, contact support to supply Driver app for the test environment.
 
 ## Are phone numbers getting shared with drivers ?
 No we use twilio to mask the phone numbers of riders.
+
+## Why is contacting driver/rider not working in test environment ?
+Calling/sms feature are not supported in test environment to prevent unregulated telecom charges.
 
 ## Can we dynamically increase availability of cars based on demand ?
 Kindly reach out to support team so that we can understand your requirements.

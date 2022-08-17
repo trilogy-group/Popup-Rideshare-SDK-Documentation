@@ -8,9 +8,10 @@ Using gradle, you can add the dependency to your project as so
 ```java
 implementation "com.messageone:popup-android:$latest_version"
 ```
+Note that during development stage, you might want to use test environment. Check the [Faqs](./faq.md) regarding how to use test environment.
 
 ## 2. Create PopupConfig 
-Create an instance of PopupConfig class, refer [Configuration](../configuration.md)
+Create an instance of PopupConfig class, refer [Configuration](./configuration.md)
 
 ## 3. Initializing the SDK
 
